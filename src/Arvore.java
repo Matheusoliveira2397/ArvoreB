@@ -39,7 +39,12 @@ public class Arvore {
     public No getRaiz() {
         return raiz;
     }
-
+    public void excluir (int i ){
+        LimparArvore(raiz, i);
+    }
+    public void busca(int i){
+        BuscaChave(raiz, i);
+    }
     public void insere(int k) {
         
         if (BuscaChave(raiz, k) == null) { 

@@ -17,34 +17,53 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
 		
 		Arvore raiz = new Arvore();
-        int x=0,op,numero;
+        int x = 0,op,numero;
         
         
         for(int i=0;i<20;i++){
             raiz.insere(i);
         }
+        System.out.println("Baleia - 1");
+        System.out.println("Cachorro - 2");
+        System.out.println("Cavalo - 3");
+        System.out.println("Cobra - 4");
+        System.out.println("Coelho - 5");
+        System.out.println("Coruja - 6");
+        System.out.println("Elefante - 7");
+        System.out.println("Gato - 8");
+        System.out.println("Leão - 9");
+        System.out.println("Lobo - 10");
+        System.out.println("Macaco - 11");
+        System.out.println("Onça - 12");
+        System.out.println("Passaro - 13");
+        System.out.println("Peixe - 14");
+        System.out.println("Porco - 15");
+        System.out.println("Tartaruga - 16");
+        System.out.println("Tigre - 17");
+        System.out.println("Tubarão -18");
+        System.out.println("Urso -19");
+        System.out.println("Vaca - 20");
+
+        
         do{
 			System.out.println("== MENU DE OPCOES ==");
 			System.out.println("1 - Buscar");
-			System.out.println("2 - Imprimir em Pre Ordem");
-			System.out.println("3 - Imprimir em Em Ordem");
-			System.out.println("4 - Imprimir em Pos Ordem");
-			System.out.println("5 - Sair");
+			System.out.println("2 - Imprimir em Em Ordem");
+			System.out.println("3 - Excluir");
+			System.out.println("4 - Sair");
 			System.out.println("== DIGITE UMA OPCAO ==");
 			
 			op = entrada.nextInt();
 			
-			if (op < 1 || op >= 5){
+			if (op < 1 || op > 4){
 				System.out.println("OPCAO INVALIDA");
 			}
 			if (op == 1){
 				System.out.println("Digite um numero");
 				numero = entrada.nextInt();
-				raiz.inserir(numero);
-				System.out.println("Inserido");
-				
-			}
-        if (x==1){
+				raiz.busca(numero);
+                                x=numero;
+				if (x==1){
         Baleia b = new Baleia();
         b.setVisible(true);
         }
@@ -123,6 +142,22 @@ public class Main {
         if (x==20){
         Vaca b = new Vaca();
         b.setVisible(true);
+        }    
+			}
+                        if (op == 2){
+                            raiz.getOrdem();
+                        }
+                        if (op == 3){
+                            System.out.println("Digite um numero");
+				numero = entrada.nextInt();
+                            raiz.excluir(numero);
+                        }
+        
         }
-    }
+        }
 }
+        
+
+        
+   
+        
